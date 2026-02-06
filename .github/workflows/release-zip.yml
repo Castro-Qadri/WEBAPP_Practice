@@ -1,0 +1,43 @@
+name: Build Runnable ZIP
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag (e.g., v1.0.0)"
+        required: true
+      release_name:
+        description: "Release name"
+        required: true
+        default: "GFC Showcase"
+
+jobs:
+  build-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create ZIP
+        run: |
+          zip -r gfc-showcase.zip . \
+            -x "**/node_modules/**" \
+            -x "**/.next/**" \
+            -x "**/dist/**" \
+            -x "**/build/**" \
+            -x "**/.env" \
+            -x "**/.env.*" \
+            -x "**/venv/**" \
+            -x "**/.venv/**" \
+            -x "**/__pycache__/**" \
+            -x "**/*.pyc" \
+            -x "**/*.sqlite3"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          name: ${{ inputs.release_name }}
+          files: gfc-showcase.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
