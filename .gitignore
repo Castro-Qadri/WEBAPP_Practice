@@ -1,0 +1,24 @@
+# Environment
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+venv/
+.venv/
+
+# Node
+node_modules/
+
+# Build output
+.next/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db

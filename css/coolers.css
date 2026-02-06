@@ -1,0 +1,1651 @@
+/* ============================================
+   GFC - Coolers Page Specific Styles
+   ============================================ */
+
+/* ============================================
+   PRELOADER - COOLER SPECIFIC
+   ============================================ */
+.preloader-cooler {
+    width: 100px;
+    height: 130px;
+    position: relative;
+}
+
+.preloader-cooler .cooler-body {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-cooler .cooler-grill {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+    border-radius: 50%;
+    border: 3px solid #5a5a6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-cooler .grill-fan {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.preloader-cooler .grill-fan.spinning {
+    animation: spin 0.8s linear infinite;
+}
+
+.preloader-cooler .grill-fan span {
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 4px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.preloader-cooler .grill-fan span:nth-child(1) { transform: rotate(0deg) translateX(5px); }
+.preloader-cooler .grill-fan span:nth-child(2) { transform: rotate(120deg) translateX(5px); }
+.preloader-cooler .grill-fan span:nth-child(3) { transform: rotate(240deg) translateX(5px); }
+
+.cool-waves {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.cool-waves span {
+    width: 15px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    border-radius: 2px;
+    animation: coolWave 1s ease-in-out infinite;
+}
+
+.cool-waves span:nth-child(2) { animation-delay: 0.2s; }
+.cool-waves span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes coolWave {
+    0%, 100% { transform: translateX(-5px); opacity: 0.5; }
+    50% { transform: translateX(5px); opacity: 1; }
+}
+
+/* ============================================
+   HERO - COOLER 3D
+   ============================================ */
+.cooler-3d-container {
+    width: 380px;
+    height: 500px;
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cooler-3d {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.cooler-body-3d {
+    width: 260px;
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.cooler-top {
+    padding: 15px;
+    background: linear-gradient(180deg, #5a5a6e 0%, #4a4a5e 100%);
+}
+
+.control-panel-cooler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #1a1a2e;
+    border-radius: 10px;
+}
+
+.speed-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.speed-btn {
+    width: 30px;
+    height: 30px;
+    background: #2a2a3e;
+    border: 1px solid #3a3a4e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-500);
+    transition: var(--transition-normal);
+}
+
+.speed-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--dark);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.mode-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mode-icon {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 50%;
+    animation: modePulse 2s ease-in-out infinite;
+}
+
+@keyframes modePulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+}
+
+.mode-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #3b82f6;
+    letter-spacing: 2px;
+}
+
+.cooler-front {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cooler-grill-3d {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.grill-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.grill-pattern span {
+    width: 30%;
+    height: 4px;
+    background: #3a3a4e;
+    border-radius: 2px;
+}
+
+.inner-fan {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 5;
+}
+
+.inner-fan.spinning-slow {
+    animation: spin 2s linear infinite;
+}
+
+.fan-blade-c {
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background: linear-gradient(135deg, #5a5a6e 0%, #3a3a4e 100%);
+    border-radius: 8px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.fan-blade-c:nth-child(1) { transform: rotate(0deg) translateX(10px); }
+.fan-blade-c:nth-child(2) { transform: rotate(120deg) translateX(10px); }
+.fan-blade-c:nth-child(3) { transform: rotate(240deg) translateX(10px); }
+
+.air-output {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.air-wave {
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.8), transparent);
+    border-radius: 2px;
+    animation: airWaveOut 1.5s ease-out infinite;
+}
+
+.air-wave:nth-child(2) { animation-delay: 0.3s; }
+.air-wave:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes airWaveOut {
+    0% { transform: translateX(0) scaleX(0.5); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(30px) scaleX(1.5); opacity: 0; }
+}
+
+.cooler-base {
+    padding: 20px;
+    background: linear-gradient(180deg, #2a2a3e 0%, #1a1a2e 100%);
+}
+
+.water-tank {
+    height: 40px;
+    background: #1a1a2e;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.water-level-indicator {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+    width: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.water-fill-hero {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+    animation: waterBob 2s ease-in-out infinite;
+}
+
+@keyframes waterBob {
+    0%, 100% { height: 70%; }
+    50% { height: 65%; }
+}
+
+.wheels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.wheel {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle at 30% 30%, #4a4a5e, #2a2a3e);
+    border-radius: 50%;
+    border: 2px solid #3a3a4e;
+}
+
+.cooler-shadow {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 30px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* ============================================
+   COOLING TECHNOLOGY SECTION
+   ============================================ */
+.cooling-tech-section {
+    padding: var(--section-padding) 50px;
+    background: var(--secondary);
+}
+
+.cooling-demo {
+    max-width: var(--container-width);
+    margin: 60px auto 0;
+}
+
+.cooling-process {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.process-visualization {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    position: relative;
+}
+
+.air-flow-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.air-label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hot-air .air-label { color: #ef4444; }
+.cool-air .air-label { color: #3b82f6; }
+
+.air-particles {
+    width: 100px;
+    height: 80px;
+    position: relative;
+}
+
+.air-particles .particle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: particleMove 2s ease-in-out infinite;
+}
+
+.hot-air .particle {
+    background: radial-gradient(circle, #fbbf24, #ef4444);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.cool-air .particle {
+    background: radial-gradient(circle, #93c5fd, #3b82f6);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 40%; left: 60%; animation-delay: 0.5s; }
+.particle:nth-child(3) { top: 70%; left: 30%; animation-delay: 1s; }
+.particle:nth-child(4) { top: 50%; left: 80%; animation-delay: 1.5s; }
+
+@keyframes particleMove {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(10px, -5px); }
+    50% { transform: translate(-5px, 10px); }
+    75% { transform: translate(5px, 5px); }
+}
+
+.temp-display {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.temp-display.hot {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(251, 191, 36, 0.2));
+    color: #fbbf24;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.temp-display.cool {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 197, 253, 0.2));
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.cooling-pads-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pad.honeycomb {
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(135deg, #a3e635, #65a30d);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.honeycomb-pattern {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.honeycomb-pattern span {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.water-drops {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.drop {
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.8), rgba(59, 130, 246, 0.3));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: dropFall 1.5s ease-in infinite;
+}
+
+.drop:nth-child(1) { left: 20%; animation-delay: 0s; }
+.drop:nth-child(2) { left: 50%; animation-delay: 0.5s; }
+.drop:nth-child(3) { left: 80%; animation-delay: 1s; }
+
+@keyframes dropFall {
+    0% { top: 0; opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+.pad-label, .fan-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gray-400);
+}
+
+.fan-section-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.demo-blower {
+    width: 100px;
+    height: 100px;
+}
+
+.blower-housing {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.blower-wheel {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.blower-wheel.spinning {
+    animation: spin 1s linear infinite;
+}
+
+.blower-wheel span {
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.blower-wheel span:nth-child(1) { transform: rotate(0deg) translateX(8px); }
+.blower-wheel span:nth-child(2) { transform: rotate(60deg) translateX(8px); }
+.blower-wheel span:nth-child(3) { transform: rotate(120deg) translateX(8px); }
+.blower-wheel span:nth-child(4) { transform: rotate(180deg) translateX(8px); }
+.blower-wheel span:nth-child(5) { transform: rotate(240deg) translateX(8px); }
+.blower-wheel span:nth-child(6) { transform: rotate(300deg) translateX(8px); }
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.process-step {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: var(--transition-normal);
+}
+
+.process-step:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-5px);
+}
+
+.step-number {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.process-step h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    font-size: 14px;
+    color: var(--gray-500);
+}
+
+/* ============================================
+   FEATURED COOLER
+   ============================================ */
+.luxury-cooler {
+    width: 280px;
+    position: relative;
+}
+
+.lux-cooler-body {
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lux-panel-cooler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.lux-display-cooler {
+    background: #0a0a0f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #3b82f6;
+}
+
+.lux-display-cooler span {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+.lux-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.lux-btn {
+    width: 15px;
+    height: 15px;
+    background: #2a2a3e;
+    border-radius: 50%;
+    border: 1px solid #3a3a4e;
+}
+
+.lux-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.lux-grill {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+    border-radius: 15px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lux-grill-inner {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #1a1a2e 0%, #2a2a3e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lux-fan {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.lux-fan.spinning-elegant {
+    animation: spin 3s linear infinite;
+}
+
+.lux-fan span {
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background: linear-gradient(135deg, #5a5a6e 0%, #3a3a4e 100%);
+    border-radius: 8px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.lux-fan span:nth-child(1) { transform: rotate(0deg) translateX(10px); }
+.lux-fan span:nth-child(2) { transform: rotate(120deg) translateX(10px); }
+.lux-fan span:nth-child(3) { transform: rotate(240deg) translateX(10px); }
+
+.lux-tank {
+    height: 50px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lux-water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.5) 100%);
+    overflow: hidden;
+}
+
+.lux-wave {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0 60c200 40 400-40 600 0s400-40 600 0v60H0z' fill='rgba(59,130,246,0.4)'/%3E%3C/svg%3E");
+    background-size: 300px 10px;
+    animation: waveMove 3s linear infinite;
+}
+
+.cool-glow {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+}
+
+/* ============================================
+   MOTOR SECTION - COOLER SPECIFIC
+   ============================================ */
+.cooler-motor-assembly {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blower-motor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.motor-frame {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #3a3a4e 0%, #2a2a3e 100%);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        inset 0 5px 20px rgba(0, 0, 0, 0.5),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.motor-stator-c {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.copper-windings-c {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.winding-c {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    border: 3px solid #CD7F32;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(205, 127, 50, 0.4);
+}
+
+.winding-c:nth-child(1) { top: 5px; left: 50%; transform: translateX(-50%); }
+.winding-c:nth-child(2) { right: 5px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+.winding-c:nth-child(3) { bottom: 5px; left: 50%; transform: translateX(-50%); }
+.winding-c:nth-child(4) { left: 5px; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+.motor-rotor-c {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.motor-rotor-c.spinning {
+    animation: spin 2s linear infinite;
+}
+
+.rotor-core-c {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #5a5a6e 0%, #3a3a4e 100%);
+    border-radius: 50%;
+}
+
+.rotor-shaft-c {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 12px;
+    background: linear-gradient(180deg, #5a5a6e 0%, #3a3a4e 100%);
+    border-radius: 6px;
+}
+
+.motor-bearing-c {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.bearing-ball {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle at 30% 30%, #8a8a9e, #5a5a6e);
+    border-radius: 50%;
+}
+
+.blower-cage {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #3a3a4e 0%, #2a2a3e 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+.cage-blades {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.cage-blades.spinning {
+    animation: spin 1s linear infinite;
+}
+
+.cage-blades span {
+    position: absolute;
+    width: 30px;
+    height: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 4px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.cage-blades span:nth-child(1) { transform: rotate(0deg) translateX(10px); }
+.cage-blades span:nth-child(2) { transform: rotate(60deg) translateX(10px); }
+.cage-blades span:nth-child(3) { transform: rotate(120deg) translateX(10px); }
+.cage-blades span:nth-child(4) { transform: rotate(180deg) translateX(10px); }
+.cage-blades span:nth-child(5) { transform: rotate(240deg) translateX(10px); }
+.cage-blades span:nth-child(6) { transform: rotate(300deg) translateX(10px); }
+
+.cooler-labels .motor-label {
+    font-size: 11px;
+}
+
+.cooler-labels .label-copper {
+    position: absolute;
+    top: 20%;
+    left: -100px;
+}
+
+.cooler-labels .label-blower {
+    position: absolute;
+    bottom: 20%;
+    right: -100px;
+}
+
+/* Motor Feature Icons */
+.copper-icon svg {
+    width: 60px;
+    height: 60px;
+}
+
+.copper-icon svg circle {
+    animation: copperPulse 2s ease-in-out infinite;
+}
+
+@keyframes copperPulse {
+    0%, 100% { stroke-width: 3; }
+    50% { stroke-width: 5; }
+}
+
+.airflow-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.air-arrow {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.air-arrow span {
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--primary));
+    border-radius: 2px;
+    animation: arrowMove 1s ease-in-out infinite;
+}
+
+.air-arrow span:nth-child(2) { animation-delay: 0.2s; }
+.air-arrow span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes arrowMove {
+    0% { transform: translateX(-10px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(10px); opacity: 0; }
+}
+
+.pump-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pump-animation {
+    position: relative;
+    width: 40px;
+    height: 50px;
+}
+
+.pump-body {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+.pump-drop {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 15px;
+    background: #3b82f6;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    animation: pumpDrop 1s ease-in-out infinite;
+}
+
+@keyframes pumpDrop {
+    0% { top: 0; opacity: 1; }
+    100% { top: 25px; opacity: 0; }
+}
+
+.quiet-icon svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* ============================================
+   HONEYCOMB PADS SECTION
+   ============================================ */
+.pads-section {
+    padding: var(--section-padding) 50px;
+}
+
+.pads-showcase {
+    max-width: 900px;
+    margin: 60px auto 0;
+}
+
+.pad-comparison {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.pad-type {
+    flex: 1;
+    max-width: 300px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition-normal);
+}
+
+.pad-type:hover {
+    transform: translateY(-10px);
+}
+
+.pad-type.featured-pad {
+    border-color: rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.pad-visual {
+    width: 150px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.woodwool-pattern {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.fiber {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #8B7355, #A0826D, #8B7355);
+    border-radius: 2px;
+}
+
+.fiber:nth-child(1) { top: 10%; transform: rotate(-5deg); }
+.fiber:nth-child(2) { top: 30%; transform: rotate(3deg); }
+.fiber:nth-child(3) { top: 50%; transform: rotate(-2deg); }
+.fiber:nth-child(4) { top: 70%; transform: rotate(4deg); }
+.fiber:nth-child(5) { top: 90%; transform: rotate(-3deg); }
+
+.honeycomb-pattern-large {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex {
+    width: 40px;
+    height: 25px;
+    background: linear-gradient(135deg, #a3e635, #65a30d);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.vs-badge {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    flex-shrink: 0;
+}
+
+.recommended {
+    display: inline-block;
+    background: #3b82f6;
+    color: white;
+    padding: 4px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.pad-info h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.pad-specs {
+    list-style: none;
+    padding: 0;
+}
+
+.pad-specs li {
+    font-size: 14px;
+    color: var(--gray-400);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pad-specs li:last-child {
+    border-bottom: none;
+}
+
+.honeycomb-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.benefit {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: var(--transition-normal);
+}
+
+.benefit:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.water-drop {
+    width: 25px;
+    height: 35px;
+    background: linear-gradient(180deg, #93c5fd, #3b82f6);
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+}
+
+.air-flow {
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+
+.air-flow::before,
+.air-flow::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.air-flow::before { top: 30%; }
+.air-flow::after { top: 70%; }
+
+.dust-free {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #22c55e;
+    border-radius: 50%;
+    position: relative;
+}
+
+.dust-free::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #22c55e;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.benefit h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+/* ============================================
+   PARTS - COOLER SPECIFIC
+   ============================================ */
+.panel-cooler-3d {
+    width: 70px;
+    height: 25px;
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.panel-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.panel-buttons span {
+    width: 12px;
+    height: 12px;
+    background: #3a3a4e;
+    border-radius: 50%;
+    border: 1px solid #4a4a5e;
+}
+
+.grill-3d {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3a3a4e 0%, #2a2a3e 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+}
+
+.grill-slats span {
+    width: 100%;
+    height: 4px;
+    background: #1a1a2e;
+    border-radius: 2px;
+}
+
+.blower-3d {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blower-fan {
+    width: 35px;
+    height: 35px;
+    background: radial-gradient(circle, var(--primary-dark), var(--primary));
+    border-radius: 50%;
+}
+
+.blower-fan.spinning {
+    animation: spin 1s linear infinite;
+}
+
+.honeycomb-3d {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hex-3d {
+    width: 25px;
+    height: 15px;
+    background: linear-gradient(135deg, #a3e635, #65a30d);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.tank-3d {
+    width: 60px;
+    height: 50px;
+    background: linear-gradient(135deg, #3a3a4e 0%, #2a2a3e 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.water-inside {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.5) 100%);
+}
+
+.tank-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 5px;
+    background: rgba(59, 130, 246, 0.4);
+    animation: tankWave 2s linear infinite;
+}
+
+@keyframes tankWave {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ============================================
+   PRODUCT CARDS - COOLER SPECIFIC
+   ============================================ */
+.product-cooler {
+    width: 150px;
+    height: 180px;
+    position: relative;
+}
+
+.pc-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.pc-grill {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.pc-fan {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.pc-fan span {
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    background: linear-gradient(135deg, #5a5a6e 0%, #3a3a4e 100%);
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.pc-fan span:nth-child(1) { transform: rotate(0deg) translateX(8px); }
+.pc-fan span:nth-child(2) { transform: rotate(120deg) translateX(8px); }
+.pc-fan span:nth-child(3) { transform: rotate(240deg) translateX(8px); }
+
+.pc-tank {
+    height: 40px;
+    background: #1a1a2e;
+    margin: 0 15px 15px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pc-tank::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.4));
+}
+
+.pc-tank.large {
+    height: 50px;
+}
+
+/* Tower Cooler */
+.product-cooler.tower {
+    width: 80px;
+    height: 200px;
+}
+
+.tc-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.tc-grill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 10px;
+}
+
+.tc-grill span {
+    width: 100%;
+    height: 4px;
+    background: #1a1a2e;
+    border-radius: 2px;
+}
+
+.tc-tank {
+    height: 30px;
+    background: rgba(59, 130, 246, 0.2);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Personal Cooler */
+.product-cooler.personal {
+    width: 100px;
+    height: 120px;
+}
+
+.pp-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.pp-grill {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.pp-fan {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.pp-fan span {
+    position: absolute;
+    width: 15px;
+    height: 6px;
+    background: #4a4a5e;
+    border-radius: 3px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.pp-fan span:nth-child(1) { transform: rotate(0deg) translateX(5px); }
+.pp-fan span:nth-child(2) { transform: rotate(180deg) translateX(5px); }
+
+.pp-tank {
+    height: 25px;
+    background: rgba(59, 130, 246, 0.2);
+    margin: 0 10px 10px;
+    border-radius: 5px;
+}
+
+/* Room Cooler */
+.product-cooler.room {
+    width: 120px;
+    height: 140px;
+}
+
+.rc-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #4a4a5e 0%, #2a2a3e 100%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.rc-grill {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.rc-fan {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.rc-fan span {
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    background: #4a4a5e;
+    border-radius: 4px;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0% 50%;
+}
+
+.rc-fan span:nth-child(1) { transform: rotate(0deg) translateX(5px); }
+.rc-fan span:nth-child(2) { transform: rotate(180deg) translateX(5px); }
+
+.rc-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.rc-controls span {
+    width: 20px;
+    height: 20px;
+    background: #2a2a3e;
+    border-radius: 50%;
+    border: 1px solid #3a3a4e;
+}
+
+/* Eco variant */
+.eco-body {
+    background: linear-gradient(180deg, #1a4a1a 0%, #0a3a0a 100%);
+}
+
+.eco-fan span {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+/* CTA Cool variant */
+.cta-cool {
+    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #1d4ed8 100%);
+}
+
+.cta-cool h2, .cta-cool p {
+    color: white;
+}
+
+.cta-cool .btn-primary {
+    background: white;
+    color: #1d4ed8;
+}
+
+.cta-cool .btn-secondary {
+    border-color: white;
+    color: white;
+}
+
+.cta-cool .btn-secondary:hover {
+    background: white;
+    color: #1d4ed8;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .process-visualization {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .honeycomb-benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .cooler-3d-container {
+        width: 300px;
+        height: 420px;
+    }
+
+    .cooler-body-3d {
+        width: 220px;
+    }
+
+    .pad-comparison {
+        flex-direction: column;
+    }
+
+    .vs-badge {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-visualization {
+        flex-direction: column;
+    }
+
+    .cooling-pads-section {
+        order: -1;
+    }
+
+    .luxury-cooler {
+        width: 240px;
+    }
+
+    .lux-grill {
+        width: 160px;
+        height: 160px;
+    }
+
+    .cooler-motor-assembly {
+        width: 220px;
+        height: 220px;
+    }
+
+    .blower-motor {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .cooler-3d-container {
+        width: 260px;
+        height: 380px;
+    }
+
+    .cooler-body-3d {
+        width: 200px;
+    }
+}

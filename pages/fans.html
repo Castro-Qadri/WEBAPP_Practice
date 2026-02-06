@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFC Ceiling Fans - Premium Copper Motor Technology</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/product-pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+</head>
+<body class="product-page fans-page">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="product-preloader-icon">
+                <div class="preloader-fan">
+                    <div class="preloader-blade"></div>
+                    <div class="preloader-blade"></div>
+                    <div class="preloader-blade"></div>
+                    <div class="preloader-blade"></div>
+                    <div class="preloader-blade"></div>
+                    <div class="preloader-center"></div>
+                </div>
+            </div>
+            <h3 class="preloader-title">GFC FANS</h3>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="main-nav dark-nav">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <svg viewBox="0 0 120 50" class="nav-logo-svg">
+                    <text x="50%" y="70%" text-anchor="middle" fill="currentColor" class="nav-gfc-text">GFC</text>
+                </svg>
+            </a>
+        </div>
+        <div class="nav-menu">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="#hero" class="nav-link active">Fans</a>
+            <a href="#motor" class="nav-link">Technology</a>
+            <a href="#products" class="nav-link">Products</a>
+        </div>
+        <div class="nav-cta">
+            <a href="#products" class="btn-explore">View Collection</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Brand Introduction -->
+    <section class="product-hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="particle-container" id="particles"></div>
+        </div>
+
+        <div class="hero-content-split">
+            <div class="hero-text-content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span>/</span>
+                    <span>Ceiling Fans</span>
+                </div>
+                
+                <div class="brand-reveal">
+                    <span class="brand-letter" data-letter="G">G</span>
+                    <span class="brand-letter" data-letter="F">F</span>
+                    <span class="brand-letter" data-letter="C">C</span>
+                </div>
+                
+                <h1 class="product-hero-title">
+                    <span class="title-line">Ceiling</span>
+                    <span class="title-line highlight">Fans</span>
+                </h1>
+                
+                <p class="product-hero-subtitle">
+                    Where Engineering Excellence Meets Timeless Design
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-value">100%</span>
+                        <span class="stat-label">Pure Copper</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">56"</span>
+                        <span class="stat-label">Sweep Size</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-value">65%</span>
+                        <span class="stat-label">Energy Saving</span>
+                    </div>
+                </div>
+                
+                <div class="scroll-cta">
+                    <div class="scroll-line"></div>
+                    <span>Scroll to Explore</span>
+                </div>
+            </div>
+            
+            <div class="hero-visual-content">
+                <div class="main-fan-display">
+                    <div class="fan-3d-container" id="product-viewer-3d">
+                        <div class="fan-3d product-3d">
+                            <!-- 3D Fan Visualization -->
+                            <div class="fan-body-3d">
+                                <div class="fan-motor-housing">
+                                    <div class="motor-cap"></div>
+                                    <div class="motor-body-outer"></div>
+                                </div>
+                                <div class="fan-blade-assembly spinning-slow">
+                                    <div class="blade-3d blade-1"></div>
+                                    <div class="blade-3d blade-2"></div>
+                                    <div class="blade-3d blade-3"></div>
+                                    <div class="blade-3d blade-4"></div>
+                                    <div class="blade-3d blade-5"></div>
+                                </div>
+                                <div class="fan-center-cap">
+                                    <span class="cap-logo">GFC</span>
+                                </div>
+                            </div>
+                            <div class="fan-down-rod"></div>
+                            <div class="fan-canopy"></div>
+                        </div>
+                        <div class="fan-shadow"></div>
+                    </div>
+                    <div class="drag-hint">
+                        <svg viewBox="0 0 24 24" class="drag-icon">
+                            <path d="M10 9l-3 3 3 3M14 9l3 3-3 3"/>
+                        </svg>
+                        <span>Drag to Rotate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Air Flow Animation Section -->
+    <section class="airflow-section">
+        <div class="section-header centered">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">
+                Feel The
+                <span class="highlight">Breeze</span>
+            </h2>
+        </div>
+        
+        <div class="airflow-demo">
+            <div class="airflow-container" id="airflow-container">
+                <div class="room-visualization">
+                    <div class="ceiling"></div>
+                    <div class="demo-fan">
+                        <div class="demo-blades spinning">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="demo-center"></div>
+                    </div>
+                    <div class="air-particles">
+                        <div class="air-stream stream-1"></div>
+                        <div class="air-stream stream-2"></div>
+                        <div class="air-stream stream-3"></div>
+                    </div>
+                    <div class="floor"></div>
+                </div>
+            </div>
+            
+            <div class="airflow-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="28" stroke="currentColor" fill="none" stroke-width="2"/>
+                            <path d="M20 32c0-8 5-14 12-14s12 6 12 14" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>360° Air Circulation</h4>
+                    <p>Uniform airflow distribution across the entire room</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 64 64">
+                            <path d="M32 8v48M16 24l16-16 16 16" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>High Air Delivery</h4>
+                    <p>Up to 230 CMM for powerful cooling performance</p>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="20" stroke="currentColor" fill="none" stroke-width="2"/>
+                            <path d="M32 20v12l8 8" stroke="currentColor" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Silent Operation</h4>
+                    <p>Whisper-quiet performance at just 28dB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase - Nabeel Fan -->
+    <section class="featured-product">
+        <div class="featured-bg">
+            <div class="bg-pattern"></div>
+        </div>
+        
+        <div class="featured-content">
+            <div class="product-badge">FLAGSHIP MODEL</div>
+            
+            <div class="featured-layout">
+                <div class="featured-image-container">
+                    <div class="product-spotlight">
+                        <div class="spotlight-ring"></div>
+                        <div class="spotlight-ring delay-1"></div>
+                        <div class="spotlight-ring delay-2"></div>
+                    </div>
+                    <div class="featured-fan">
+                        <div class="luxury-fan">
+                            <div class="lux-motor">
+                                <div class="lux-motor-top"></div>
+                                <div class="lux-motor-body"></div>
+                            </div>
+                            <div class="lux-blades spinning-elegant">
+                                <div class="lux-blade"></div>
+                                <div class="lux-blade"></div>
+                                <div class="lux-blade"></div>
+                                <div class="lux-blade"></div>
+                                <div class="lux-blade"></div>
+                            </div>
+                            <div class="lux-center">
+                                <span>GFC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-glow"></div>
+                </div>
+                
+                <div class="featured-details">
+                    <h2 class="featured-name">
+                        <span class="name-pre">GFC</span>
+                        <span class="name-main">NABEEL</span>
+                        <span class="name-series">PREMIUM SERIES</span>
+                    </h2>
+                    
+                    <p class="featured-description">
+                        The Nabeel represents the pinnacle of GFC's engineering prowess. 
+                        Crafted with 100% pure copper motor windings and precision-balanced 
+                        aluminum blades, it delivers exceptional air delivery with whisper-quiet operation.
+                    </p>
+                    
+                    <div class="featured-specs">
+                        <div class="spec-row">
+                            <span class="spec-name">Motor Type</span>
+                            <span class="spec-value">AC/DC Inverter Ready</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Sweep Size</span>
+                            <span class="spec-value">56 inches (1400mm)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Air Delivery</span>
+                            <span class="spec-value">230 CMM</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">RPM</span>
+                            <span class="spec-value">350 ± 10%</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Power Consumption</span>
+                            <span class="spec-value">75W (AC) / 35W (DC)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Warranty</span>
+                            <span class="spec-value">2 Years Comprehensive</span>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-price">
+                        <span class="price-label">Starting from</span>
+                        <span class="price-value">PKR 8,500</span>
+                    </div>
+                    
+                    <div class="featured-actions">
+                        <button class="btn-primary">
+                            <span>Order Now</span>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                        <button class="btn-secondary">Download Brochure</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motor Technology Section -->
+    <section class="motor-section" id="motor">
+        <div class="section-header">
+            <span class="section-tag">Technology</span>
+            <h2 class="section-title">
+                Pure Copper
+                <span class="highlight">Motor</span>
+            </h2>
+            <p class="section-subtitle">
+                The heart of every GFC fan - engineered for decades of reliable performance
+            </p>
+        </div>
+        
+        <div class="motor-showcase">
+            <div class="motor-cutaway-container">
+                <div class="motor-cutaway">
+                    <!-- Outer Housing -->
+                    <div class="motor-outer-shell">
+                        <div class="shell-top"></div>
+                        <div class="shell-body"></div>
+                    </div>
+                    
+                    <!-- Stator with Copper Windings -->
+                    <div class="motor-stator-display">
+                        <div class="stator-core"></div>
+                        <div class="copper-windings">
+                            <div class="winding winding-1"></div>
+                            <div class="winding winding-2"></div>
+                            <div class="winding winding-3"></div>
+                            <div class="winding winding-4"></div>
+                            <div class="winding winding-5"></div>
+                            <div class="winding winding-6"></div>
+                        </div>
+                        <div class="winding-glow"></div>
+                    </div>
+                    
+                    <!-- Rotor -->
+                    <div class="motor-rotor-display spinning">
+                        <div class="rotor-core"></div>
+                        <div class="rotor-magnets">
+                            <span class="magnet n-pole"></span>
+                            <span class="magnet s-pole"></span>
+                            <span class="magnet n-pole"></span>
+                            <span class="magnet s-pole"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Shaft -->
+                    <div class="motor-shaft"></div>
+                    
+                    <!-- Bearings -->
+                    <div class="motor-bearings">
+                        <div class="bearing bearing-top"></div>
+                        <div class="bearing bearing-bottom"></div>
+                    </div>
+                    
+                    <!-- Magnetic Field Lines -->
+                    <div class="magnetic-fields">
+                        <div class="field-line"></div>
+                        <div class="field-line"></div>
+                        <div class="field-line"></div>
+                        <div class="field-line"></div>
+                    </div>
+                    
+                    <!-- Energy Particles -->
+                    <div class="energy-particles">
+                        <span class="energy-dot"></span>
+                        <span class="energy-dot"></span>
+                        <span class="energy-dot"></span>
+                        <span class="energy-dot"></span>
+                        <span class="energy-dot"></span>
+                    </div>
+                </div>
+                
+                <!-- Part Labels -->
+                <div class="motor-labels">
+                    <div class="motor-label label-housing" data-part="housing">
+                        <span class="label-line"></span>
+                        <span class="label-text">Aluminum Housing</span>
+                    </div>
+                    <div class="motor-label label-copper" data-part="copper">
+                        <span class="label-line"></span>
+                        <span class="label-text">100% Copper Winding</span>
+                    </div>
+                    <div class="motor-label label-rotor" data-part="rotor">
+                        <span class="label-line"></span>
+                        <span class="label-text">High-Grade Rotor</span>
+                    </div>
+                    <div class="motor-label label-bearing" data-part="bearing">
+                        <span class="label-line"></span>
+                        <span class="label-text">Double Ball Bearings</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="motor-features">
+                <div class="motor-feature">
+                    <div class="feature-icon copper-icon">
+                        <div class="copper-wire-anim">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="#CD7F32" stroke-width="8" class="copper-circle"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Pure Copper Windings</h4>
+                        <p>100% copper wire ensures maximum conductivity, reducing energy loss and heat generation. Our motors run cooler and last longer.</p>
+                    </div>
+                </div>
+                
+                <div class="motor-feature">
+                    <div class="feature-icon bearing-icon">
+                        <div class="bearing-anim">
+                            <div class="bearing-outer"></div>
+                            <div class="bearing-balls">
+                                <span></span><span></span><span></span><span></span>
+                                <span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="bearing-inner"></div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Double Ball Bearings</h4>
+                        <p>Premium sealed ball bearings for ultra-smooth, silent operation. Self-lubricating design ensures maintenance-free performance.</p>
+                    </div>
+                </div>
+                
+                <div class="motor-feature">
+                    <div class="feature-icon efficiency-icon">
+                        <div class="efficiency-meter">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="6"/>
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#D4AF37" stroke-width="6" 
+                                    stroke-dasharray="283" stroke-dashoffset="70" class="efficiency-progress"/>
+                                <text x="50" y="55" text-anchor="middle" fill="#D4AF37" font-size="24" font-weight="bold">65%</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Energy Efficient</h4>
+                        <p>Save up to 65% on electricity with our DC inverter technology. Smart power management for optimal performance.</p>
+                    </div>
+                </div>
+                
+                <div class="motor-feature">
+                    <div class="feature-icon thermal-icon">
+                        <div class="thermal-anim">
+                            <div class="thermal-wave"></div>
+                            <div class="thermal-wave"></div>
+                            <div class="thermal-wave"></div>
+                        </div>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Thermal Protection</h4>
+                        <p>Built-in thermal overload protection prevents damage from voltage fluctuations and ensures safe, reliable operation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Circuit Technology Section -->
+    <section class="circuit-section">
+        <div class="circuit-bg">
+            <div class="circuit-lines">
+                <svg class="circuit-svg" viewBox="0 0 1000 600">
+                    <path class="circuit-path" d="M0 300 L200 300 L250 250 L350 250 L400 300 L600 300 L650 350 L800 350 L850 300 L1000 300"/>
+                    <path class="circuit-path delay" d="M0 350 L150 350 L200 400 L400 400 L450 350 L550 350 L600 400 L750 400 L800 350 L1000 350"/>
+                    <circle class="circuit-node" cx="250" cy="250" r="8"/>
+                    <circle class="circuit-node" cx="400" cy="300" r="8"/>
+                    <circle class="circuit-node" cx="650" cy="350" r="8"/>
+                    <circle class="circuit-node" cx="450" cy="350" r="8"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="circuit-content">
+            <div class="section-header light">
+                <span class="section-tag">DC Inverter</span>
+                <h2 class="section-title">
+                    Smart
+                    <span class="highlight">Circuitry</span>
+                </h2>
+            </div>
+            
+            <div class="circuit-showcase">
+                <div class="circuit-board">
+                    <div class="pcb-base">
+                        <div class="pcb-traces">
+                            <div class="trace trace-1"></div>
+                            <div class="trace trace-2"></div>
+                            <div class="trace trace-3"></div>
+                            <div class="trace trace-4"></div>
+                        </div>
+                        <div class="pcb-components">
+                            <div class="component capacitor cap-1">
+                                <div class="cap-body"></div>
+                            </div>
+                            <div class="component capacitor cap-2">
+                                <div class="cap-body"></div>
+                            </div>
+                            <div class="component ic-chip">
+                                <div class="chip-body">
+                                    <span class="chip-text">GFC</span>
+                                </div>
+                                <div class="chip-pins">
+                                    <span></span><span></span><span></span><span></span>
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="component resistor res-1"></div>
+                            <div class="component resistor res-2"></div>
+                            <div class="component transistor"></div>
+                        </div>
+                        <div class="power-flow">
+                            <div class="flow-particle"></div>
+                            <div class="flow-particle"></div>
+                            <div class="flow-particle"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="circuit-features">
+                    <div class="circuit-feature">
+                        <div class="cf-number">01</div>
+                        <h4>Voltage Stabilization</h4>
+                        <p>Advanced voltage regulation ensures consistent performance even with fluctuating power supply (140V-280V).</p>
+                    </div>
+                    <div class="circuit-feature">
+                        <div class="cf-number">02</div>
+                        <h4>BLDC Technology</h4>
+                        <p>Brushless DC motor controller for higher efficiency, longer life, and precise speed control.</p>
+                    </div>
+                    <div class="circuit-feature">
+                        <div class="cf-number">03</div>
+                        <h4>Surge Protection</h4>
+                        <p>Built-in MOV protection safeguards against power surges and lightning strikes.</p>
+                    </div>
+                    <div class="circuit-feature">
+                        <div class="cf-number">04</div>
+                        <h4>Remote Compatible</h4>
+                        <p>IR receiver for wireless remote control operation with timer and speed settings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parts Explosion Section -->
+    <section class="parts-section">
+        <div class="section-header">
+            <span class="section-tag">Build Quality</span>
+            <h2 class="section-title">
+                Premium
+                <span class="highlight">Components</span>
+            </h2>
+        </div>
+        
+        <div class="parts-showcase" id="parts-explode">
+            <div class="exploded-view">
+                <div class="part-item explode-part" data-direction="up" data-distance="80">
+                    <div class="part-visual canopy-part">
+                        <div class="canopy-3d"></div>
+                    </div>
+                    <div class="part-info">
+                        <h4>Ceiling Canopy</h4>
+                        <p>Powder-coated steel</p>
+                    </div>
+                </div>
+                
+                <div class="part-item explode-part" data-direction="up" data-distance="50">
+                    <div class="part-visual downrod-part">
+                        <div class="downrod-3d"></div>
+                    </div>
+                    <div class="part-info">
+                        <h4>Down Rod</h4>
+                        <p>12" galvanized steel</p>
+                    </div>
+                </div>
+                
+                <div class="part-item explode-part" data-direction="left" data-distance="60">
+                    <div class="part-visual motor-part">
+                        <div class="motor-3d spinning-slow"></div>
+                    </div>
+                    <div class="part-info">
+                        <h4>Motor Assembly</h4>
+                        <p>Pure copper winding</p>
+                    </div>
+                </div>
+                
+                <div class="part-item explode-part" data-direction="right" data-distance="60">
+                    <div class="part-visual blade-part">
+                        <div class="blade-3d-sample"></div>
+                    </div>
+                    <div class="part-info">
+                        <h4>Fan Blades (5)</h4>
+                        <p>Die-cast aluminum</p>
+                    </div>
+                </div>
+                
+                <div class="part-item explode-part" data-direction="down" data-distance="40">
+                    <div class="part-visual cap-part">
+                        <div class="cap-3d">GFC</div>
+                    </div>
+                    <div class="part-info">
+                        <h4>Center Cap</h4>
+                        <p>Chrome finish</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Collection -->
+    <section class="products-collection" id="products">
+        <div class="section-header">
+            <span class="section-tag">Our Collection</span>
+            <h2 class="section-title">
+                Explore
+                <span class="highlight">Models</span>
+            </h2>
+        </div>
+        
+        <div class="products-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ac">AC Motors</button>
+            <button class="filter-btn" data-filter="dc">DC Inverter</button>
+            <button class="filter-btn" data-filter="decorative">Decorative</button>
+        </div>
+        
+        <div class="products-grid-large">
+            <!-- Product 1 - Future (Inverter) -->
+            <div class="product-item" data-category="dc">
+                <div class="product-image">
+                    <img src="https://www.gfcfans.com/cdn/shop/files/ezgif-15d127fe1c6a4c.jpg?v=1756127597&width=360" 
+                         alt="GFC Future Inverter Ceiling Fan - Premium energy saving fan with modern design" 
+                         loading="lazy"
+                         onerror="this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/><text fill=%22%23D4AF37%22 x=%22100%22 y=%22100%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22>GFC Fan</text></svg>';">
+                    <div class="product-overlay">
+                        <a href="https://www.gfcfans.com/products/future-1" target="_blank" rel="noopener" class="quick-view-btn" role="button">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-badge-sm eco-badge">Inverter</div>
+                    <h3 class="product-name">GFC Future</h3>
+                    <p class="product-specs">56" | DC Inverter | Energy Saving</p>
+                    <div class="product-rating" aria-label="5 out of 5 stars">
+                        <div class="stars" aria-hidden="true">★★★★★</div>
+                        <span>(Premium Model)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 17,080</span>
+                    </div>
+                    <a href="https://www.gfcfans.com/products/future-1" target="_blank" rel="noopener" class="add-to-cart" role="button">Buy Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 2 - Glamour (Inverter) -->
+            <div class="product-item" data-category="dc">
+                <div class="product-image">
+                    <img src="https://www.gfcfans.com/cdn/shop/files/glamour_48a71490-dc17-4530-bd30-033d4379064e.jpg?v=1744776993&width=360" 
+                         alt="GFC Glamour Inverter Ceiling Fan - Elegant design with energy efficiency" 
+                         loading="lazy"
+                         onerror="this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/><text fill=%22%23D4AF37%22 x=%22100%22 y=%22100%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22>GFC Fan</text></svg>';">
+                    <div class="product-overlay">
+                        <a href="https://www.gfcfans.com/products/glamour" target="_blank" rel="noopener" class="quick-view-btn" role="button">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-badge-sm premium-badge">Premium</div>
+                    <h3 class="product-name">GFC Glamour</h3>
+                    <p class="product-specs">56" | DC Inverter | Stylish Design</p>
+                    <div class="product-rating" aria-label="5 out of 5 stars">
+                        <div class="stars" aria-hidden="true">★★★★★</div>
+                        <span>(Bestseller)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 17,080</span>
+                    </div>
+                    <a href="https://www.gfcfans.com/products/glamour" target="_blank" rel="noopener" class="add-to-cart" role="button">Buy Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 3 - Deluxe (Inverter) -->
+            <div class="product-item" data-category="dc">
+                <div class="product-image">
+                    <img src="https://www.gfcfans.com/cdn/shop/files/ezgif-1144c6bb973246.jpg?v=1756127054&width=360" 
+                         alt="GFC Deluxe Inverter Ceiling Fan - Classic design with modern technology" 
+                         loading="lazy"
+                         onerror="this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/><text fill=%22%23D4AF37%22 x=%22100%22 y=%22100%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22>GFC Fan</text></svg>';">
+                    <div class="product-overlay">
+                        <a href="https://www.gfcfans.com/products/deluxe-1" target="_blank" rel="noopener" class="quick-view-btn" role="button">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">GFC Deluxe</h3>
+                    <p class="product-specs">56" | DC Inverter | Pure Copper</p>
+                    <div class="product-rating" aria-label="4.5 out of 5 stars">
+                        <div class="stars" aria-hidden="true">★★★★☆</div>
+                        <span>(Popular Choice)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 10,035</span>
+                    </div>
+                    <a href="https://www.gfcfans.com/products/deluxe-1" target="_blank" rel="noopener" class="add-to-cart" role="button">Buy Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 4 - Ravi Plus (Inverter) -->
+            <div class="product-item" data-category="dc">
+                <div class="product-image">
+                    <img src="https://www.gfcfans.com/cdn/shop/files/raviplus1.jpg?v=1747812795&width=360" 
+                         alt="GFC Ravi Plus Inverter Ceiling Fan - High performance energy saver" 
+                         loading="lazy"
+                         onerror="this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/><text fill=%22%23D4AF37%22 x=%22100%22 y=%22100%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22>GFC Fan</text></svg>';">
+                    <div class="product-overlay">
+                        <a href="https://www.gfcfans.com/products/ravi-plus" target="_blank" rel="noopener" class="quick-view-btn" role="button">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-badge-sm">Bestseller</div>
+                    <h3 class="product-name">GFC Ravi Plus</h3>
+                    <p class="product-specs">56" | DC Inverter | High Air Delivery</p>
+                    <div class="product-rating" aria-label="5 out of 5 stars">
+                        <div class="stars" aria-hidden="true">★★★★★</div>
+                        <span>(Top Rated)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 10,035</span>
+                    </div>
+                    <a href="https://www.gfcfans.com/products/ravi-plus" target="_blank" rel="noopener" class="add-to-cart" role="button">Buy Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 5 - Sapphire (Inverter) -->
+            <div class="product-item" data-category="decorative">
+                <div class="product-image">
+                    <img src="https://www.gfcfans.com/cdn/shop/files/sapphire2_2ffe8125-9fba-4f71-a996-c773fc87d02e.jpg?v=1744779107&width=360" 
+                         alt="GFC Sapphire Decorative Ceiling Fan - Luxury design for modern homes" 
+                         loading="lazy"
+                         onerror="this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/><text fill=%22%23D4AF37%22 x=%22100%22 y=%22100%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22>GFC Fan</text></svg>';">
+                    <div class="product-overlay">
+                        <a href="https://www.gfcfans.com/products/sapphire-1" target="_blank" rel="noopener" class="quick-view-btn" role="button">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-badge-sm premium-badge">Premium</div>
+                    <h3 class="product-name">GFC Sapphire</h3>
+                    <p class="product-specs">56" | DC Inverter | Designer Series</p>
+                    <div class="product-rating" aria-label="5 out of 5 stars">
+                        <div class="stars" aria-hidden="true">★★★★★</div>
+                        <span>(Luxury Choice)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 11,600</span>
+                    </div>
+                    <a href="https://www.gfcfans.com/products/sapphire-1" target="_blank" rel="noopener" class="add-to-cart" role="button">Buy Now</a>
+                </div>
+            </div>
+            
+            <!-- Product 6 - Apex (Inverter) -->
+            <div class="product-item" data-category="dc">
+                <div class="product-image">
+                    <img src="https://www.gfcfans.com/cdn/shop/files/5_20250812_112018_0000-ezgif.com-webp-to-jpg-converter.jpg?v=1756127144&width=360" 
+                         alt="GFC Apex Inverter Ceiling Fan - Peak performance with sleek design" 
+                         loading="lazy"
+                         onerror="this.onerror=null;this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/><text fill=%22%23D4AF37%22 x=%22100%22 y=%22100%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2220%22>GFC Fan</text></svg>';">
+                    <div class="product-overlay">
+                        <a href="https://www.gfcfans.com/products/apex" target="_blank" rel="noopener" class="quick-view-btn" role="button">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-badge-sm new-badge">New</div>
+                    <h3 class="product-name">GFC Apex</h3>
+                    <p class="product-specs">56" | DC Inverter | Latest Model</p>
+                    <div class="product-rating" aria-label="5 out of 5 stars">
+                        <div class="stars" aria-hidden="true">★★★★★</div>
+                        <span>(New Arrival)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 10,460</span>
+                    </div>
+                    <a href="https://www.gfcfans.com/products/apex" target="_blank" rel="noopener" class="add-to-cart" role="button">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="load-more">
+            <button class="btn-secondary">
+                <span>Load More Products</span>
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Experience the GFC Difference?</h2>
+            <p>Visit our showroom or contact us for exclusive deals on premium ceiling fans</p>
+            <div class="cta-buttons">
+                <a href="../index.html#contact" class="btn-primary">
+                    <span>Contact Us</span>
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#" class="btn-secondary">Find Dealers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - GFC Official Style -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 120 50" aria-label="GFC Logo">
+                        <text x="50%" y="70%" text-anchor="middle" fill="currentColor" class="footer-gfc-text">GFC</text>
+                    </svg>
+                </div>
+                <p class="footer-tagline">For the last three decades, G.F.C has introduced innovative fan models to satisfy the needs of its customers.</p>
+                <div class="footer-contact-info">
+                    <p><strong>Address:</strong> 1st floor, Plaza No. 11, Block-MB, Phase-6C, DHA, Lahore</p>
+                    <p><strong>Phone:</strong> <a href="tel:+924237132812">+92-42-37132812</a></p>
+                    <p><strong>Home Service:</strong> <a href="tel:+923401111008">0340-1111008</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:gfc@gfcfan.com">gfc@gfcfan.com</a></p>
+                </div>
+                <div class="social-links" role="navigation" aria-label="Social media links">
+                    <a href="https://www.facebook.com/GFCfansPakistan/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.4c0 .7.6 1.3 1.3 1.3h11.5v-9.3H9.7v-3.6h3.1V8.4c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.5.1 2.8.1v3.2h-1.9c-1.5 0-1.8.7-1.8 1.8v2.3h3.6l-.5 3.6h-3.1V24h6c.7 0 1.3-.6 1.3-1.3V1.3c.1-.7-.5-1.3-1.2-1.3z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/gfcfanspakistan/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@gfcfansofficial" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2c-.2-.8-.8-1.4-1.6-1.6C20 4 12 4 12 4s-8 0-9.9.5c-.8.2-1.4.8-1.6 1.6C0 8.1 0 12 0 12s0 3.9.5 5.8c.2.8.8 1.4 1.6 1.6 1.9.5 9.9.5 9.9.5s8 0 9.9-.5c.8-.2 1.4-.8 1.6-1.6.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.5 15.5V8.5l6.6 3.5-6.6 3.5z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@gfcfanspakistan" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="washing-machines.html">Washing Machines</a></li>
+                        <li><a href="coolers.html">Air Coolers</a></li>
+                        <li><a href="https://www.gfcfans.com/collections/all" target="_blank" rel="noopener">All Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Support</h4>
+                    <ul>
+                        <li><a href="https://www.gfcfans.com/pages/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+                        <li><a href="https://www.gfcfans.com/pages/terms-of-services" target="_blank" rel="noopener">Terms of Service</a></li>
+                        <li><a href="https://www.gfcfans.com/pages/refund-policy" target="_blank" rel="noopener">Refund Policy</a></li>
+                        <li><a href="https://www.gfcfans.com/pages/complaint-status" target="_blank" rel="noopener">Complaint Status</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GFC. All Rights Reserved. Powered by ADSnDESIGN</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/fans-page.js"></script>
+</body>
+</html>
